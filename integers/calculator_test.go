@@ -38,14 +38,32 @@ func ExampleAdd() {
 	// Output: 6
 }
 
+func BenchmarkAdd(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Add(1, 10)
+	}
+}
+
 func ExampleSubtract() {
 	difference := Subtract(2, 1)
 	fmt.Println(difference)
 	// Output: 1
 }
 
+func BenchmarkSubtract(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Subtract(9, 3)
+	}
+}
+
 func ExampleMultiply() {
 	product := Multiply(3, 5)
 	fmt.Println(product)
 	// Output: 15
+}
+
+func BenchmarkMultiply(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Multiply(9, 3)
+	}
 }
