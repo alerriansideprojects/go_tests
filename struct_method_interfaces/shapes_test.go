@@ -15,7 +15,7 @@ func TestPerimeter(t *testing.T) {
 	}
 
 	t.Run("rectangle", func(t *testing.T) {
-		rectangle := Rectangle{10.0, 10.0}
+		rectangle := Rectangle{Width: 10.0, Height: 10.0}
 		got := rectangle.Perimeter()
 		want := 40.0
 
